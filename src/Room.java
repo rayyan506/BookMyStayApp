@@ -1,32 +1,23 @@
-public abstract class Room {
+public class Room {
+    private int beds;
+    private int size;
+    private double price;
 
-    /* Number of beds available in the room. */
-    protected int numberOfBeds;
-
-    /* Total size of the room in square feet. */
-    protected int squareFeet;
-
-    /* Price charged per night for this room type. */
-    protected double pricePerNight;
-
-    /**
-     * Constructor used by child classes to
-     * initialize common room attributes.
-     *
-     * @param numberOfBeds number of beds in the room
-     * @param squareFeet total room size
-     * @param pricePerNight cost per night
-     */
-    public Room(int numberOfBeds, int squareFeet, double pricePerNight) {
-        this.numberOfBeds = numberOfBeds;
-        this.squareFeet = squareFeet;
-        this.pricePerNight = pricePerNight;
+    public Room(int beds, int size, double price) {
+        this.beds = beds;
+        this.size = size;
+        this.price = price;
     }
 
-    /** Displays room details */
-    public void displayRoomDetails() {
-        System.out.println("Beds: " + numberOfBeds);
-        System.out.println("Size: " + squareFeet + " sqft");
-        System.out.println("Price per night: " + pricePerNight);
+    public int getBeds() {
+        return beds;
+    }
+
+    public int getSize() {
+        return size;
+    }
+
+    public double getPrice() {
+        return price;
     }
 }
